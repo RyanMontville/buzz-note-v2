@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1747418658179,
+  "timestamp": 1747419121589,
   "index": "/bees-v2/index.html",
   "assetGroups": [
     {
@@ -53,7 +53,7 @@
     "/bees-v2/icons/icon-96x96.png": "1adbccd7e65643515f1fc28d3fd81800fa2789a7",
     "/bees-v2/index.html": "c2ab2f21a09850258eae9b87b37b6970b5e39486",
     "/bees-v2/main-EVG7MIJQ.js": "1a8c2eec836aecc1f6f4d6d1337414fb6940d24f",
-    "/bees-v2/manifest.webmanifest": "29fd6ac0851623dac6e60151e4e3847a672a696b",
+    "/bees-v2/manifest.webmanifest": "176727e67ccbdca118db6d12639acf6e0788f7da",
     "/bees-v2/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
     "/bees-v2/styles-U3MVIMRA.css": "8cd93664f3e3f4e255808810dec4ee83a7bf28ec"
   },
