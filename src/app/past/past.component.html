@@ -1,0 +1,47 @@
+<app-header [showHR]="false"/>
+<div class="container">
+  <main>
+    @if (error) {
+      <div class="alert alert-danger" role="alert">
+          {{error}}
+        </div>
+  }
+  @if (message) {
+      <div class="alert alert-success" role="alert">
+          {{message}}
+        </div>
+  }
+  @if (loading) {
+      <p>Loading inspections list...</p>
+  }
+  @if (!loading) {
+    <section class="button-group-row">
+      @for (year of years; track $index) {
+        <button class="button white" [class.active]="showingYear === year" (click)="filterYears(year)">{{year}}</button>
+      }
+    </section>
+  <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Hive Name</th>
+          <th scope="col">Start Time</th>
+          <th scope="col">Box Count</th>
+          <th scope="col">Total Frame Count</th>
+        </tr>
+      </thead>
+      <tbody>
+          @for (inspection of yearToShow; track $index) {
+              <tr (click)="viewInspection(inspection.inspection_id)">
+                  <td>{{inspection.inspection_date.toString().split('T')[0]}}</td>
+                  <td>{{inspection.hive_name}}</td>
+                  <td>{{inspection.start_time}}</td>
+                  <td>{{inspection.num_boxes}}</td>
+                  <td>{{inspection.total_frames}}</td>
+              </tr>
+          }
+      </tbody>
+    </table>
+  }
+  </main>
+</div>

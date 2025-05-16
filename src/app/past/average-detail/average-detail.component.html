@@ -1,0 +1,59 @@
+@if (showTable) {
+<h2>Box Averages</h2>
+@if (loading) {
+<p>Loading...</p>
+}
+@if (!loading) {
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Box</th>
+                <th scope="col"># of Frames</th>
+                <th scope="col">Honey</th>
+                <th scope="col">Nectar</th>
+                <th scope="col">Brood</th>
+                <th scope="col">Cells</th>
+                <th scope="col">Comb Pattern</th>
+                <th scope="col">Queen Spotted</th>
+                <th scope="col">Show Frames</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (average of averages; track $index) {
+            <tr>
+                <td>{{average.box_name}}</td>
+                <td>{{average.num_frames}}</td>
+                <td>{{average.honey}}%</td>
+                <td>{{average.nectar}}%</td>
+                <td>{{average.brood}}%</td>
+                <td>{{average.cells}}%</td>
+                <td>{{average.comb_pattern}}%</td>
+                <td>{{average.queen_spotted}}</td>
+                <td><button class="edit-button" (click)="average.showFrames = !average.showFrames">
+                        @if (!average.showFrames) {
+                        <span class="material-symbols-outlined">
+                            unfold_more
+                        </span>
+                        }
+                        @if (average.showFrames) {
+                        <span class="material-symbols-outlined">
+                            unfold_less
+                        </span>
+                        }
+                    </button>
+                </td>
+            </tr>
+            @if(average.showFrames) {
+            <tr>
+                <td [attr.colspan]="9">
+                    <app-frame-detail [inspectionID]="inspectionID" [boxName]="average.box_name" />
+                </td>
+            </tr>
+            }
+            }
+        </tbody>
+    </table>
+</div>
+}
+}
