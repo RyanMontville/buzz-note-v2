@@ -4,8 +4,8 @@
   "theme_color": "#f2a007",
   "background_color": "#e5e5e5",
   "display": "standalone",
-  "scope": "./bees-v2/",
-  "start_url": "./bees-v2/",
+  "scope": "/bees-v2/",
+  "start_url": "/bees-v2/",
   "icons": [
     {
       "src": "icons/icon-72x72.png",
