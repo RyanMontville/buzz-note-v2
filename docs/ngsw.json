@@ -1,0 +1,79 @@
+{
+  "configVersion": 1,
+  "timestamp": 1747417431035,
+  "index": "/bees-v2/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/bees-v2/favicon.ico",
+        "/bees-v2/index.html",
+        "/bees-v2/main-EVG7MIJQ.js",
+        "/bees-v2/manifest.webmanifest",
+        "/bees-v2/polyfills-FFHMD2TL.js",
+        "/bees-v2/styles-U3MVIMRA.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/bees-v2/icons/icon-128x128.png",
+        "/bees-v2/icons/icon-144x144.png",
+        "/bees-v2/icons/icon-152x152.png",
+        "/bees-v2/icons/icon-192x192.png",
+        "/bees-v2/icons/icon-384x384.png",
+        "/bees-v2/icons/icon-512x512.png",
+        "/bees-v2/icons/icon-72x72.png",
+        "/bees-v2/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/bees-v2/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/bees-v2/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/bees-v2/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/bees-v2/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/bees-v2/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/bees-v2/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/bees-v2/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/bees-v2/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/bees-v2/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/bees-v2/index.html": "c2ab2f21a09850258eae9b87b37b6970b5e39486",
+    "/bees-v2/main-EVG7MIJQ.js": "1a8c2eec836aecc1f6f4d6d1337414fb6940d24f",
+    "/bees-v2/manifest.webmanifest": "29fd6ac0851623dac6e60151e4e3847a672a696b",
+    "/bees-v2/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "/bees-v2/styles-U3MVIMRA.css": "8cd93664f3e3f4e255808810dec4ee83a7bf28ec"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
