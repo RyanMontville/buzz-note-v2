@@ -1,1 +1,34 @@
-<p>frame-detail works!</p>
+@if (loading) {
+    <p>Loading frames</p>
+}
+@if (!loading) {
+    <div>
+        <div class="table-responsive">
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Frame #</th>
+                  <th scope="col">Honey</th>
+                  <th scope="col">Nectar</th>
+                  <th scope="col">Brood</th>
+                  <th scope="col">Cells</th>
+                  <th scope="col">Draw Comb</th>
+                </tr>
+              </thead>
+              <tbody>
+          @for (frame of frames; track $index) {
+              <tr>
+                  <td>{{frame.frame_number}}</td>
+                  <td>{{frame.honey}}</td>
+                  <td>{{frame.nectar}}</td>
+                  <td>{{frame.brood}}</td>
+                  <td>{{frame.cells}}</td>
+                  <td>{{frame.comb_pattern}}</td>
+              </tr>
+          }
+          </tbody>
+          </table>
+          </div>
+      </div>
+}
+  

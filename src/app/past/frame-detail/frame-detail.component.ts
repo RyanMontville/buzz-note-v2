@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Frame } from '../../bees.model';
+import { Subscription } from 'rxjs';
+import { FramesService } from '../../services/frames.service';
 
 @Component({
   selector: 'app-frame-detail',
@@ -7,8 +9,26 @@ import { Frame } from '../../bees.model';
   templateUrl: './frame-detail.component.html',
   styleUrl: './frame-detail.component.css'
 })
-export class FrameDetailComponent {
+export class FrameDetailComponent implements OnInit, OnDestroy {
   @Input() inspectionID: number = 0;
   @Input() boxName: string = "";
   frames: Frame[] = [];
+  loading: boolean = false;
+  private frameSubscription: Subscription | undefined;
+
+  constructor(private frameService: FramesService) {}
+
+  ngOnInit(): void {
+    this.loading = true;
+    this.frameSubscription = this.frameService.getFramesByInspectionAndBox(this.inspectionID, this.boxName)
+    .subscribe(frames => {
+      this.frames = frames;
+      this.loading = false;
+    })
+  }
+  ngOnDestroy(): void {
+    throw new Error('Method not implemented.');
+  }
+
+
 }

@@ -2,6 +2,7 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 15px;
+    background-color: var(--header-background);
 }
 
 .back-button, header h1 a {
