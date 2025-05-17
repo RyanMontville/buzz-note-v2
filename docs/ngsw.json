@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1747485008884,
+  "timestamp": 1747490759790,
   "index": "/bees-v2/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/bees-v2/favicon.ico",
         "/bees-v2/index.html",
-        "/bees-v2/main-UWHAPBPJ.js",
+        "/bees-v2/main-R35FNKVP.js",
         "/bees-v2/manifest.webmanifest",
         "/bees-v2/polyfills-FFHMD2TL.js",
         "/bees-v2/styles-ZOBS67OG.css"
@@ -51,8 +51,8 @@
     "/bees-v2/icons/icon-512x512.png": "f099c1b7c679f6cbce731ec8a0f936cd00fa07b8",
     "/bees-v2/icons/icon-72x72.png": "8ea827079b00ba0875ff9a5d6d7638d586372853",
     "/bees-v2/icons/icon-96x96.png": "1adbccd7e65643515f1fc28d3fd81800fa2789a7",
-    "/bees-v2/index.html": "bb44494787251f6ea6ef862e3fd6b1efa61b9088",
-    "/bees-v2/main-UWHAPBPJ.js": "1c7654a7e1282452fee7dac4d6d3ca7c224cd135",
+    "/bees-v2/index.html": "8f65beec49c1bee321d9578641a2e501cdfe7961",
+    "/bees-v2/main-R35FNKVP.js": "0a96d6d5f081ac986644e5e61d2559c50349c88a",
     "/bees-v2/manifest.webmanifest": "e5525ac93b6120669d6192e69026ae43e7a79fa7",
     "/bees-v2/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
     "/bees-v2/styles-ZOBS67OG.css": "bb990958d3831e06dff9e48b41ec7edf97f77641"

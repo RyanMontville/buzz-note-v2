@@ -6,6 +6,9 @@ import { Frame } from '../bees.model';
   providedIn: 'root'
 })
 export class FramesService {
+  addNewFrame(newFrameSideA: any) {
+    throw new Error('Method not implemented.');
+  }
   private _frames = new BehaviorSubject<Frame[]>([
     new Frame(1, 1, 1, 'Box 1', '1A', true, false, true, true, false),
     new Frame(2, 1, 1, 'Box 1', '1B', false, false, false, true, false),

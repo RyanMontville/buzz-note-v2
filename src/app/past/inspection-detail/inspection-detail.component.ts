@@ -48,6 +48,7 @@ export class InspectionDetailComponent implements OnInit, OnDestroy {
         if (!foundInspection) {
           this.error = "Error. Inspection not found";
         } else {
+          console.log(foundInspection);
           this.inspection = foundInspection;
           this.notes = foundInspection.notes;
           this.newNotes = foundInspection.notes;
