@@ -1,5 +1,6 @@
 <app-header [showBackButton]="false" [showHR]="false"/>
 <div class="container">
+    <app-alerts [message]="message" />
     <main>
         <section class="button-group-column">
             <a routerLink="start" class="large full button green">Start New Inspection</a>
@@ -9,3 +10,19 @@
         </section>
     </main>
 </div>
+
+@if (isPopupOpen) {
+    <div class="popupBackground">
+        <div class="popup">
+            <h2>This is a demo app</h2>
+            <p style="text-align: left;">Please note that this demo app will only keep any changes you make to the app while you have the app open.</p>
+            <p style="text-align: left;">This app is a Progressive Web App, which means you can install it as an app on your phone:</p>
+            <ul style="text-align: left;">
+                <li>On Android devices, visit this page in chrome, click on the 3 dot menu, select "Add to Homescreen", and then click install.</li>
+                <li>On iPhones, visit this page in Safari, tap the "Share" button, select "Add to Home Screen," and then tap "Add".</li>
+            </ul>
+                 
+            <div class="button-group-row"><button class="button blue" (click)="closePopup()">Ok</button></div>
+        </div>
+    </div>
+}

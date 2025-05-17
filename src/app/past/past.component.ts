@@ -4,10 +4,11 @@ import { Inspection } from '../bees.model';
 import { InspectionService } from '../services/inspection.service';
 import { HeaderComponent } from "../header/header.component";
 import { Subscription } from 'rxjs';
+import { AlertsComponent } from "../alerts/alerts.component";
 
 @Component({
   selector: 'app-past',
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, AlertsComponent],
   templateUrl: './past.component.html',
   styleUrl: './past.component.css'
 })

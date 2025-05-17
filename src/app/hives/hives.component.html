@@ -1,20 +1,11 @@
 <app-header [showBackButton]="true"/>
 <div class="container">
+  <app-alerts [error]="error" [message]="message" />
   <main>
     <p>Hives: {{hives?.length}}</p>
     @if (loading) {
     <p>Loading Hives...</p>
     }
-    @if (message) {
-      <div class="alert alert-success" role="alert">
-          {{message}}
-      </div>
-  }
-      @if (error) {
-      <div class="alert alert-danger" role="alert">
-          {{error}}
-      </div>
-      }
     @if (!loading) {
       <p>Click on a hive to view and update</p>
       <div class="table-responsive">

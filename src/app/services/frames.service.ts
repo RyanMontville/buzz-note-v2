@@ -6,7 +6,7 @@ import { Frame } from '../bees.model';
   providedIn: 'root'
 })
 export class FramesService {
-  private _frame = new BehaviorSubject<Frame[]>([
+  private _frames = new BehaviorSubject<Frame[]>([
     new Frame(1, 1, 1, 'Box 1', '1A', true, false, true, true, false),
     new Frame(2, 1, 1, 'Box 1', '1B', false, false, false, true, false),
     new Frame(3, 1, 1, 'Box 1', '2A', false, false, true, true, true),
@@ -68,7 +68,7 @@ export class FramesService {
     new Frame(59, 3, 1, 'Box 3', '10A', false, true, true, false, true),
     new Frame(60, 3, 1, 'Box 3', '10B', false, true, true, true, false),
   ]);
-  public frames$ = this._frame.asObservable();
+  public frames$ = this._frames.asObservable();
 
   constructor() { }
 
@@ -80,5 +80,22 @@ export class FramesService {
         )
       )
     );
+  }
+
+  addFrame(newFrame: Frame) {
+    const currentFrames = this._frames.getValue();
+    this._frames.next([...currentFrames, newFrame]);
+  }
+
+  getNextID(): Observable<number> {
+    return this.frames$.pipe(
+      map(frames => {
+        if (frames.length === 0) {
+          return 1;
+        }
+        const highestID: number = Math.max(...frames.map(frame => frame.frame_id));
+        return highestID + 1;
+      })
+    )
   }
 }

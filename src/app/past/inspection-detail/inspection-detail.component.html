@@ -1,15 +1,6 @@
 <app-header [showHR]="true" [backLink]="backLink.page" [year]="backLink.year!"/>
 <div class="container">
-    @if (error) {
-    <div class="alert alert-danger" role="alert">
-      {{error}}
-    </div>
-    }
-    @if (message) {
-    <div class="alert alert-success" role="alert">
-      {{message}}
-    </div>
-    }
+    <app-alerts [error]="error" [message]="message" />
     @if (loading) {
     <p>Loading...</p>
     }

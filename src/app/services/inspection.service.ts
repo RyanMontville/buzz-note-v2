@@ -9,7 +9,6 @@ export class InspectionService {
   private _inspections = new BehaviorSubject<Inspection[]>([
     new Inspection(1, 1, '2024-04-01', 'Hive A', 3, 30, '14:00:00', 75, 'Overcast', 'Calm', 'Low', 'Normal', 'Good', 'None', 'None', 'First inspection of the year.')
   ]);
-
   public inspections$ = this._inspections.asObservable();
 
   constructor() { }
@@ -23,10 +22,6 @@ export class InspectionService {
   addInspection(newInspection: Inspection) {
     const currentInspections = this._inspections.getValue();
     this._inspections.next([...currentInspections, newInspection]);
-  }
-
-  get currentInspections(): Inspection[] {
-    return this._inspections.getValue();
   }
 
   updateInspection(updatedInspection: Inspection) {
@@ -46,5 +41,17 @@ export class InspectionService {
       return inspection;
     });
     this._inspections.next(updatedInspections);
+  }
+
+  getNextID(): Observable<number> {
+    return this.inspections$.pipe(
+      map(inspections => {
+        if (inspections.length === 0) {
+          return 1;
+        }
+        const highestID: number = Math.max(...inspections.map(inspection => inspection.inspection_id));
+        return highestID + 1;
+      })
+    )
   }
 }

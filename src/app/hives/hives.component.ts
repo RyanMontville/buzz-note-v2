@@ -6,10 +6,11 @@ import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from '../header/header.component';
+import { AlertsComponent } from "../alerts/alerts.component";
 
 @Component({
   selector: 'app-hives',
-  imports: [FormsModule, CommonModule, HeaderComponent],
+  imports: [FormsModule, CommonModule, HeaderComponent, AlertsComponent],
   templateUrl: './hives.component.html',
   styleUrl: './hives.component.css'
 })

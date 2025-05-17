@@ -1,16 +1,7 @@
 <app-header [showBackButton]="true" backLink="/hives"/>
 <div class="container">
+    <app-alerts [error]="error" [message]="message" />
     <main>
-        @if (error) {
-            <div class="alert alert-danger" role="alert">
-                {{error}}
-              </div>
-        }
-        @if (message) {
-            <div class="alert alert-success" role="alert">
-                {{message}}
-              </div>
-        }
         @if (loading) {
             <p>Loading hive details...</p>
         }

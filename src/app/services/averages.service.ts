@@ -26,7 +26,15 @@ export class AveragesService {
     this._averages.next([...currentAverages, newAverage]);
   }
 
-  get currentAverages(): AverageDetail[] {
-    return this._averages.getValue();
+  getNextID(): Observable<number> {
+    return this.averages$.pipe(
+      map(averages => {
+        if (averages.length === 0) {
+          return 1;
+        }
+        const highestID: number = Math.max(...averages.map(average => average.average_id));
+        return highestID + 1;
+      })
+    )
   }
 }

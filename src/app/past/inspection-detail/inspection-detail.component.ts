@@ -7,10 +7,11 @@ import { AverageDetailComponent } from "../average-detail/average-detail.compone
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from '../../header/header.component';
+import { AlertsComponent } from "../../alerts/alerts.component";
 
 @Component({
   selector: 'app-inspection-detail',
-  imports: [AverageDetailComponent, FormsModule, CommonModule, HeaderComponent],
+  imports: [AverageDetailComponent, FormsModule, CommonModule, HeaderComponent, AlertsComponent],
   templateUrl: './inspection-detail.component.html',
   styleUrl: './inspection-detail.component.css'
 })
