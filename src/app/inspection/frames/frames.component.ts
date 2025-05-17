@@ -66,6 +66,7 @@ export class FramesComponent implements OnInit, OnDestroy {
     let paramHiveID = this.route.snapshot.queryParamMap.get('hiveID');
     let paramHiveName = this.route.snapshot.queryParamMap.get('hiveName');
     let paramInspectionID = this.route.snapshot.queryParamMap.get('inspectionID');
+    console.log("Frame component OnInIt")
     this.nextAvgIdSubscription = this.averageService.getNextID().subscribe({
       next: (nextId) => {
         this.nextAvgId = nextId;
@@ -207,6 +208,7 @@ export class FramesComponent implements OnInit, OnDestroy {
   }
 
   goToEnd() {
+    this.nextBox();
     this.router.navigate(['./end'], { queryParams: { inspectionID: this.inspectionID } });
   }
 }

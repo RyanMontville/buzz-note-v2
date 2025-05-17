@@ -42,7 +42,11 @@ export class InspectionComponent implements OnInit, OnDestroy {
       });
     this.nextIdSubscription = this.inspectionService.getNextID().subscribe({
       next: (nextId) => {
-        this.nextId = nextId;
+        if (this.nextId === 0) {
+          this.nextId = nextId;
+        } else {
+          console.log(`Starting inspection. NextID called but next Id is ${this.nextId}`)
+        }
         this.loading = false;
       },
       error: (error) => {
@@ -64,7 +68,7 @@ export class InspectionComponent implements OnInit, OnDestroy {
     let newInspection: Inspection = new Inspection(this.nextId, hive.hive_id, this.getFormattedDate(), hive.hive_name, hive.num_boxes,
       this.countTotalFramesForHive(hive.hive_id), this.getStartTime(), 0, "", "", "", "", "", "", "", "");
     this.inspectionService.addInspection(newInspection);
-    console.log(`Created new inspection with ID: ${this.nextId}`);
+    console.log(`Inspection component: Created new inspection with ID: ${this.nextId}`);
     this.router.navigate(['./frames'], { queryParams: { inspectionID: this.nextId, hiveID: hive.hive_id, hiveName: hive.hive_name } });
   }
 
@@ -73,6 +77,7 @@ export class InspectionComponent implements OnInit, OnDestroy {
     this.boxService.getBoxesForHiveId(hiveID).subscribe(
       (boxes) => boxes?.forEach(box => totalFrames += box.num_frames)
     );
+    console.log(`Total num frames is ${totalFrames}`)
     return totalFrames;
   }
 

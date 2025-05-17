@@ -46,6 +46,7 @@ export class PastComponent implements OnInit, OnDestroy {
       (inspections) => {
         this.inspections = inspections;
         console.log(`${this.inspections.length} inspections found`);
+        this.inspections.forEach(inspection => console.log(inspection))
         this.getYears();
         let paramYear = this.route.snapshot.queryParamMap.get('year');
         if (paramYear) {

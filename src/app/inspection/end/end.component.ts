@@ -32,16 +32,20 @@ export class EndComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     let paraminspectionID = this.route.snapshot.queryParamMap.get('inspectionID');
+    console.log(`End component: inspection ID: ${paraminspectionID}`)
     if (!paraminspectionID) {
       this.errorCountdown();
     } else {
       this.inspectionID = +paraminspectionID;
       this.updatedInspection.inspection_id = +paraminspectionID;
       this.inspectionSubscription = this.inspectionService.getInspectionById(this.inspectionID).subscribe(data => {
+        console.log(`End: OnInIT data: ${JSON.stringify(data)}`);
         this.updatedInspection.hive_id = data?.hive_id ?? 0;
           this.updatedInspection.hive_name = data?.hive_name ?? '';
           this.updatedInspection.start_time = data?.start_time ?? '';
           this.updatedInspection.inspection_date = data?.inspection_date ?? '';
+          this.updatedInspection.num_boxes = data?.num_boxes ?? 0;
+          this.updatedInspection.total_frames = data?.total_frames ?? 0;
       });
       this.fetchWeather();
     }
@@ -56,6 +60,7 @@ export class EndComponent implements OnInit, OnDestroy {
   fetchWeather() {
     this.weatherService.getCurrentWeather().subscribe({
       next: (data) => {
+        console.log(`End component: weather: ${JSON.stringify(data)}`)
         this.updatedInspection.weather_condition = data.condition;
         this.updatedInspection.weather_temp = Math.round(data.temp);
       }, error: (error) => {
