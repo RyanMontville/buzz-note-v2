@@ -1,0 +1,10 @@
+<div class="box-container">
+    @for (frame of frames; track $index) {
+        <div 
+        class="frame-container none"
+        [class.honey]="frame.honey"
+        [class.nectar]="frame.nectar">
+            {{frame.frame_number}} {{queen === frame.frame_number ? 'Queen Spotted this frame' : ''}}
+        </div>
+    }
+</div>

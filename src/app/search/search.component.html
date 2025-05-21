@@ -9,7 +9,7 @@
             <button class="button" [class.white]="searchFor !== 'dateRange'" [class.blue]="searchFor === 'dateRange'"
                 (click)="showSearchOptions(2)">Date Range</button>
             <button class="button" [class.white]="searchFor !== 'tempRange'" [class.blue]="searchFor === 'tempRange'"
-                (click)="showSearchOptions(3)">Temerature Range</button>
+                (click)="showSearchOptions(3)">Temperature Range</button>
             <button class="button" [class.white]="searchFor !== 'weather'" [class.blue]="searchFor === 'weather'"
                 (click)="showSearchOptions(4)">Weather Condition</button>
         </section>
@@ -44,14 +44,14 @@
         <p>Search temperature between</p>
         <div class="row">
             <div class="col">
-                <input type="number" class="form-control" placeholder="Minimum Temerature" aria-label="Minimum Temerature"
+                <input type="number" class="form-control" placeholder="Minimum Temperature" aria-label="Minimum Temperature"
                     [(ngModel)]="tempRange.minTemp">
             </div>
             <div class="col">
                 <p>AND</p>
             </div>
             <div class="col">
-                <input type="number" class="form-control" placeholder="Maximum Temerature" aria-label="Maximum Temerature"
+                <input type="number" class="form-control" placeholder="Maximum Temperature" aria-label="Maximum Temperature"
                     [(ngModel)]="tempRange.maxTemp">
             </div>
             <div class="col">

@@ -3,10 +3,11 @@ import { AverageDetail } from '../../bees.model';
 import { AveragesService } from '../../services/averages.service';
 import { Subscription } from 'rxjs';
 import { FrameDetailComponent } from "../frame-detail/frame-detail.component";
+import { VisualDetailComponent } from "../visual-detail/visual-detail.component";
 
 @Component({
   selector: 'app-average-detail',
-  imports: [FrameDetailComponent],
+  imports: [FrameDetailComponent, VisualDetailComponent],
   templateUrl: './average-detail.component.html',
   styleUrl: './average-detail.component.css'
 })
