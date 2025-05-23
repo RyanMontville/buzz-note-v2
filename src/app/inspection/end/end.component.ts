@@ -20,7 +20,7 @@ export class EndComponent implements OnInit, OnDestroy {
   weather: TempAndCondition = new TempAndCondition(0, "");
   inspectionID: number = 0;
   countdownSubscription?: Subscription;
-  updatedInspection: Inspection = new Inspection(0, 0, "", "", 0, 0, "", 0, "", "", "", "", "", "", "", "");
+  updatedInspection: Inspection = new Inspection(0, 0, "", "", 0, 0, "", 0, "", "", "", "", "", "", "", false, false, false, false, "");
   allFilledIn: boolean = false;
   private inspectionSubscription: Subscription | undefined;
 
@@ -36,6 +36,12 @@ export class EndComponent implements OnInit, OnDestroy {
     if (!paraminspectionID) {
       this.errorCountdown();
     } else {
+      let paramQueen = this.route.snapshot.queryParamMap.get('queen');
+      if (paramQueen) {
+        if (paramQueen === 'true') {
+          this.updatedInspection.queen_spotted = true;
+        }
+      }
       this.inspectionID = +paraminspectionID;
       this.updatedInspection.inspection_id = +paraminspectionID;
       this.inspectionSubscription = this.inspectionService.getInspectionById(this.inspectionID).subscribe(data => {

@@ -161,4 +161,19 @@ export class SearchComponent implements OnInit, OnDestroy {
     });
   }
 
+  filterQueen(queen: boolean) {
+    this.showSearchOption = 0;
+    this.loading = true;
+    this.searchService.FilterQueenSpotted(queen).subscribe({
+      next: (data) => {
+        this.loading = false;
+        this.searchResults = data;
+        this.message = `${this.searchResults.length} results where the queen ${queen ? 'was' : 'was not'} spotted`;
+      },error: (error) => {
+        this.error = error;
+        this.loading = false;
+      },
+    });
+  }
+
 }

@@ -66,7 +66,7 @@ export class InspectionComponent implements OnInit, OnDestroy {
 
   startNewIspection(hive: Hive) {
     let newInspection: Inspection = new Inspection(this.nextId, hive.hive_id, this.getFormattedDate(), hive.hive_name, hive.num_boxes,
-      this.countTotalFramesForHive(hive.hive_id), this.getStartTime(), 0, "", "", "", "", "", "", "", "");
+      this.countTotalFramesForHive(hive.hive_id), this.getStartTime(), 0, "", "", "", "", "", "", "", false, false, false, false, "");
     this.inspectionService.addInspection(newInspection);
     console.log(`Inspection component: Created new inspection with ID: ${this.nextId}`);
     this.router.navigate(['./frames'], { queryParams: { inspectionID: this.nextId, hiveID: hive.hive_id, hiveName: hive.hive_name } });

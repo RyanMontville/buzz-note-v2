@@ -12,6 +12,8 @@
                 (click)="showSearchOptions(3)">Temperature Range</button>
             <button class="button" [class.white]="searchFor !== 'weather'" [class.blue]="searchFor === 'weather'"
                 (click)="showSearchOptions(4)">Weather Condition</button>
+                <button class="button" [class.white]="searchFor !== 'queen'" [class.blue]="searchFor === 'queen'"
+                (click)="showSearchOptions(5)">Queen Spotted</button>
         </section>
         @if (showSearchOption === 1) {
         <p>Choose a hive:</p>
@@ -78,6 +80,17 @@
                 <button class="button green" (click)="searchWeather()">Search</button>
             </div>
         </div>
+        }
+        @if (showSearchOption === 5) {
+            <p>Filter Queen Spotted</p>
+            <div class="row">
+                <div class="col">
+                    <button class="button green full" (click)="filterQueen(true)">Queen was spotted</button>
+                </div>
+                <div class="col">
+                    <button class="button red full" (click)="filterQueen(false)">Queen not spotted</button>
+                </div>
+            </div>
         }
         @if (loading) {
         Loading search results...

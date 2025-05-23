@@ -51,6 +51,7 @@ export class FramesComponent implements OnInit, OnDestroy {
     { sideA: false, sideB: false },
     { sideA: false, sideB: false });
   currentBoxAverages: AverageCounts = new AverageCounts("", 0, 0, 0, 0, 0, "Not Spotted");
+  queen_spotted: string = 'false';
   private boxbscription: Subscription | undefined;
   private nextFrameIdSubscription: Subscription | undefined;
   private nextAvgIdSubscription: Subscription | undefined;
@@ -141,13 +142,15 @@ export class FramesComponent implements OnInit, OnDestroy {
     this.error = null;
     this.currentBoxAverages.honey += (this.currentFrame.honey.sideA ? 1 : 0) + (this.currentFrame.honey.sideB ? 1 : 0);
     this.currentBoxAverages.nectar += (this.currentFrame.nectar.sideA ? 1 : 0) + (this.currentFrame.nectar.sideB ? 1 : 0);
-    this.currentBoxAverages.cells += (this.currentFrame.cells.sideA ? 1 : 0) + (this.currentFrame.cells.sideB ? 1 : 0);
+    this.currentBoxAverages.cells += (this.currentFrame.queen_cells.sideA ? 1 : 0) + (this.currentFrame.queen_cells.sideB ? 1 : 0);
     this.currentBoxAverages.brood += (this.currentFrame.brood.sideA ? 1 : 0) + (this.currentFrame.brood.sideB ? 1 : 0);
-    this.currentBoxAverages.comb += (this.currentFrame.comb.sideA ? 1 : 0) + (this.currentFrame.comb.sideB ? 1 : 0);
+    this.currentBoxAverages.comb += (this.currentFrame.drawn_comb.sideA ? 1 : 0) + (this.currentFrame.drawn_comb.sideB ? 1 : 0);
     if (this.currentFrame.queenSpotted.sideA === true) {
       this.currentBoxAverages.queen = `${this.currentFrameNumber}A`;
+      this.queen_spotted = 'true';
     } else if (this.currentFrame.queenSpotted.sideB) {
       this.currentBoxAverages.queen = `${this.currentFrameNumber}B`;
+      this.queen_spotted = 'true';
     }
     //reset current frame values
     this.currentFrame = new FrameFormGroup(
@@ -164,17 +167,19 @@ export class FramesComponent implements OnInit, OnDestroy {
     //Add side A to DB
     let newFrameSideA = new Frame(
       this.nextFrameId, this.currentBox.box_id, this.inspectionID, this.currentBox.box_name,
-      `${this.currentFrameNumber}A`, this.currentFrame.comb.sideA, this.currentFrame.honey.sideA, this.currentFrame.nectar.sideA,
-      this.currentFrame.brood.sideA, this.currentFrame.cells.sideA);
+      `${this.currentFrameNumber}A`, this.currentFrame.drawn_comb.sideA, this.currentFrame.honey.sideA, this.currentFrame.nectar.sideA,
+      this.currentFrame.brood.sideA, this.currentFrame.queen_cells.sideA);
     this.frameService.addFrame(newFrameSideA);
     let newFrameSideB = new Frame(this.nextFrameId, this.currentBox.box_id, this.inspectionID, this.currentBox.box_name,
-      `${this.currentFrameNumber}B`, this.currentFrame.comb.sideB, this.currentFrame.honey.sideB, this.currentFrame.nectar.sideB,
-      this.currentFrame.brood.sideB, this.currentFrame.cells.sideB);
+      `${this.currentFrameNumber}B`, this.currentFrame.drawn_comb.sideB, this.currentFrame.honey.sideB, this.currentFrame.nectar.sideB,
+      this.currentFrame.brood.sideB, this.currentFrame.queen_cells.sideB);
     this.frameService.addFrame(newFrameSideB);
-    if (action == 1) {
+    if (action === 1) {
       this.nextFrame();
-    } else {
+    } else if (action === 2) {
       this.nextBox();
+    } else {
+      this.goToEnd();
     }
   }
 
@@ -209,7 +214,7 @@ export class FramesComponent implements OnInit, OnDestroy {
 
   goToEnd() {
     this.nextBox();
-    this.router.navigate(['./end'], { queryParams: { inspectionID: this.inspectionID } });
+    this.router.navigate(['./end'], { queryParams: { inspectionID: this.inspectionID, queen: this.queen_spotted } });
   }
 }
 

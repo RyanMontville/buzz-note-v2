@@ -7,7 +7,7 @@ import { Inspection } from '../bees.model';
 })
 export class InspectionService {
   private _inspections = new BehaviorSubject<Inspection[]>([
-    new Inspection(1, 1, '2024-04-01', 'Hive A', 3, 30, '14:00:00', 75, 'Overcast', 'Calm', 'Low', 'Normal', 'Good', 'None', 'None', 'First inspection of the year.')
+    new Inspection(1, 1, '2024-04-01', 'Hive A', 3, 30, '14:00:00', 75, 'Overcast', 'Calm', 'Low', 'Normal', 'Good', 'None', 'None', true, false, true, true, 'First inspection of the year.')
   ]);
   public inspections$ = this._inspections.asObservable();
 

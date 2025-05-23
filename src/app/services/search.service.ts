@@ -46,4 +46,10 @@ export class SearchService {
       map(Inspections => Inspections.filter(inspection => inspection.weather_condition === condition))
     )
   }
+
+  FilterQueenSpotted(queen: boolean): Observable<Inspection[]> {
+    return this.inspectionService.inspections$.pipe(
+      map(Inspections => Inspections.filter(inspection => inspection.queen_spotted === queen))
+    )
+  }
 }

@@ -57,6 +57,18 @@
             <button class="button full red" [class.half]="updatedInspection.other_pests !== 'Lots'"
                 (click)="onClick('pests', 'Lots')">Lots</button>
         </div>
+        <h3>Brood</h3>
+        <div class="button-group-row">
+            <button class="button full" [class.green]="updatedInspection.brood_eggs"
+            [class.red]="!updatedInspection.brood_eggs" 
+            (click)="updatedInspection.brood_eggs = !updatedInspection.brood_eggs">Brood Eggs</button>
+            <button class="button full" [class.green]="updatedInspection.brood_larva"
+            [class.red]="!updatedInspection.brood_larva" 
+            (click)="updatedInspection.brood_larva = !updatedInspection.brood_larva">Brood Larva</button>
+            <button class="button full" [class.green]="updatedInspection.brood_capped"
+            [class.red]="!updatedInspection.brood_capped" 
+            (click)="updatedInspection.brood_capped = !updatedInspection.brood_capped">Brood Capped</button>
+        </div>
         @if (allFilledIn) {
         <button class="button white" (click)="finishInspection()">Finish Inspection</button>
         }

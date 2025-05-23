@@ -20,6 +20,7 @@
           <th scope="col">Laying Pattern</th>
           <th scope="col">Hive Beetles</th>
           <th scope="col">Other Pests</th>
+          <th scope="col">Brood</th>
         </tr>
       </thead>
       <tbody>
@@ -31,6 +32,9 @@
           <td>{{inspection?.laying_pattern}}</td>
           <td>{{inspection?.hive_beetles}}</td>
           <td>{{inspection?.other_pests}}</td>
+          <td>{{inspection?.brood_eggs ? 'Eggs' : ''}} 
+            {{inspection?.brood_larva ? 'Larva' : ''}} 
+            {{inspection?.brood_capped ? 'Capped' : ''}}</td>
         </tr>
       </tbody>
     </table>

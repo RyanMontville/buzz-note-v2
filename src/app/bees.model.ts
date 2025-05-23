@@ -15,6 +15,10 @@ export class Inspection {
         public laying_pattern: string,
         public hive_beetles: string,
         public other_pests: string,
+        public brood_eggs: boolean,
+        public brood_larva: boolean,
+        public brood_capped: boolean,
+        public queen_spotted: boolean,
         public notes: string
     ) {}
 }
@@ -28,8 +32,8 @@ export class Average {
         public honey: string,
         public nectar: string,
         public brood: string,
-        public cells: string,
-        public comb_pattern: string,
+        public queen_cells: string,
+        public drawn_comb: string,
         public queen_spotted: string,
     ) {}
 }
@@ -43,8 +47,8 @@ export class AverageDetail {
         public honey: string,
         public nectar: string,
         public brood: string,
-        public cells: string,
-        public comb_pattern: string,
+        public queen_cells: string,
+        public drawn_comb: string,
         public queen_spotted: string,
         public showFrames: boolean
     ) {
@@ -93,11 +97,11 @@ export class Frame {
         public inspection_id: number, 
         public box_name: string, 
         public frame_number: string, 
-        public comb_pattern: boolean, 
+        public drawn_comb: boolean, 
         public honey: boolean, 
         public nectar: boolean, 
         public brood: boolean, 
-        public cells: boolean
+        public queen_cells: boolean
     ) {}
 }
 
@@ -107,8 +111,8 @@ export class FrameFormGroup {
         public nectar: FramePair,
         public brood: FramePair,
         public queenSpotted: FramePair,
-        public cells: FramePair,
-        public comb: FramePair
+        public queen_cells: FramePair,
+        public drawn_comb: FramePair
     ) {}
 }
 
