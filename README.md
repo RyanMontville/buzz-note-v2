@@ -1,6 +1,6 @@
 # BuzzNote V2
 Version 2.0 of BuzzNote - A bee hive health tracker
-[WIP link](https://ryanmontville.com/bees-v2/)
+[WIP link](https://ryanmontville.com/buzz-note-v2/)
 
 ## Changes
 | V1 | V2 |
