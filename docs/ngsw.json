@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1748270718461,
+  "timestamp": 1748284733425,
   "index": "/buzz-note-v2/index.html",
   "assetGroups": [
     {
@@ -53,7 +53,7 @@
     "/buzz-note-v2/icons/icon-96x96.png": "1adbccd7e65643515f1fc28d3fd81800fa2789a7",
     "/buzz-note-v2/index.html": "74adae56d749fe07a24ec24231162e820845f51e",
     "/buzz-note-v2/main-IWRHKT4U.js": "d8c79030b3190f9472583897523cf7a475eab253",
-    "/buzz-note-v2/manifest.webmanifest": "64da3c30cfddd7f61183b24c3334f86196a9e3d7",
+    "/buzz-note-v2/manifest.webmanifest": "1559544635ad2fff53a8a10f565bda07007ea7ce",
     "/buzz-note-v2/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
     "/buzz-note-v2/styles-CO2HXFDH.css": "490e468f12bcf0bdd8668937af78e94a6b2523a7"
   },

@@ -1,6 +1,6 @@
 {
-  "name": "bees-demo",
-  "short_name": "bees-demo",
+  "name": "BuzzNote Demo",
+  "short_name": "BuzzNote Demo",
   "theme_color": "#f2a007",
   "background_color": "#e5e5e5",
   "display": "standalone",
