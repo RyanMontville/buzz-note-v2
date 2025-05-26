@@ -16,3 +16,5 @@ Version 2.0 of BuzzNote - A bee hive health tracker
 ## New for V2
 * Better Error handling
 * Can be installed as a Progrssive Web App
+
+You can view BuzzNote V1 [here](https://github.com/RyanMontville/buzz-note-v1)

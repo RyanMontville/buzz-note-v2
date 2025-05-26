@@ -33,7 +33,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/bees-v2/",
+              "baseHref": "/buzz-note-v2/",
               "budgets": [
                 {
                   "type": "initial",
@@ -50,8 +50,8 @@
               "serviceWorker": "ngsw-config.json"
             },
             "development": {
-              "baseHref": "/bees-v2/",
-            "deployUrl": "/bees-v2/",
+              "baseHref": "/buzz-note-v2/",
+            "deployUrl": "/buzz-note-v2/",
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true

@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1748268914234,
-  "index": "/bees-v2/index.html",
+  "timestamp": 1748270718461,
+  "index": "/buzz-note-v2/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,12 +11,12 @@
         "ignoreVary": true
       },
       "urls": [
-        "/bees-v2/favicon.ico",
-        "/bees-v2/index.html",
-        "/bees-v2/main-IWRHKT4U.js",
-        "/bees-v2/manifest.webmanifest",
-        "/bees-v2/polyfills-FFHMD2TL.js",
-        "/bees-v2/styles-CO2HXFDH.css"
+        "/buzz-note-v2/favicon.ico",
+        "/buzz-note-v2/index.html",
+        "/buzz-note-v2/main-IWRHKT4U.js",
+        "/buzz-note-v2/manifest.webmanifest",
+        "/buzz-note-v2/polyfills-FFHMD2TL.js",
+        "/buzz-note-v2/styles-CO2HXFDH.css"
       ],
       "patterns": []
     },
@@ -28,34 +28,34 @@
         "ignoreVary": true
       },
       "urls": [
-        "/bees-v2/icons/icon-128x128.png",
-        "/bees-v2/icons/icon-144x144.png",
-        "/bees-v2/icons/icon-152x152.png",
-        "/bees-v2/icons/icon-192x192.png",
-        "/bees-v2/icons/icon-384x384.png",
-        "/bees-v2/icons/icon-512x512.png",
-        "/bees-v2/icons/icon-72x72.png",
-        "/bees-v2/icons/icon-96x96.png"
+        "/buzz-note-v2/icons/icon-128x128.png",
+        "/buzz-note-v2/icons/icon-144x144.png",
+        "/buzz-note-v2/icons/icon-152x152.png",
+        "/buzz-note-v2/icons/icon-192x192.png",
+        "/buzz-note-v2/icons/icon-384x384.png",
+        "/buzz-note-v2/icons/icon-512x512.png",
+        "/buzz-note-v2/icons/icon-72x72.png",
+        "/buzz-note-v2/icons/icon-96x96.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/bees-v2/favicon.ico": "355b9cd21b03678ffe61d7589db178b692f5c421",
-    "/bees-v2/icons/icon-128x128.png": "d79b5a75002e0912569d7dcc9919e9a5c086b2af",
-    "/bees-v2/icons/icon-144x144.png": "f2ba3783bba02181c18aea902d8ea552dee92785",
-    "/bees-v2/icons/icon-152x152.png": "12688834738b342c46d7fd8c8856c176f9f9aa85",
-    "/bees-v2/icons/icon-192x192.png": "7dedf812a7e6d6fe3a829259c986e6fd39ebe5e3",
-    "/bees-v2/icons/icon-384x384.png": "d98d8f50800354cb5bb72a021d605d9b1a29b59f",
-    "/bees-v2/icons/icon-512x512.png": "f099c1b7c679f6cbce731ec8a0f936cd00fa07b8",
-    "/bees-v2/icons/icon-72x72.png": "8ea827079b00ba0875ff9a5d6d7638d586372853",
-    "/bees-v2/icons/icon-96x96.png": "1adbccd7e65643515f1fc28d3fd81800fa2789a7",
-    "/bees-v2/index.html": "8261b1b23755a58f714ee39faa25e7d7b4d92f0a",
-    "/bees-v2/main-IWRHKT4U.js": "d8c79030b3190f9472583897523cf7a475eab253",
-    "/bees-v2/manifest.webmanifest": "e5525ac93b6120669d6192e69026ae43e7a79fa7",
-    "/bees-v2/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/bees-v2/styles-CO2HXFDH.css": "490e468f12bcf0bdd8668937af78e94a6b2523a7"
+    "/buzz-note-v2/favicon.ico": "355b9cd21b03678ffe61d7589db178b692f5c421",
+    "/buzz-note-v2/icons/icon-128x128.png": "d79b5a75002e0912569d7dcc9919e9a5c086b2af",
+    "/buzz-note-v2/icons/icon-144x144.png": "f2ba3783bba02181c18aea902d8ea552dee92785",
+    "/buzz-note-v2/icons/icon-152x152.png": "12688834738b342c46d7fd8c8856c176f9f9aa85",
+    "/buzz-note-v2/icons/icon-192x192.png": "7dedf812a7e6d6fe3a829259c986e6fd39ebe5e3",
+    "/buzz-note-v2/icons/icon-384x384.png": "d98d8f50800354cb5bb72a021d605d9b1a29b59f",
+    "/buzz-note-v2/icons/icon-512x512.png": "f099c1b7c679f6cbce731ec8a0f936cd00fa07b8",
+    "/buzz-note-v2/icons/icon-72x72.png": "8ea827079b00ba0875ff9a5d6d7638d586372853",
+    "/buzz-note-v2/icons/icon-96x96.png": "1adbccd7e65643515f1fc28d3fd81800fa2789a7",
+    "/buzz-note-v2/index.html": "74adae56d749fe07a24ec24231162e820845f51e",
+    "/buzz-note-v2/main-IWRHKT4U.js": "d8c79030b3190f9472583897523cf7a475eab253",
+    "/buzz-note-v2/manifest.webmanifest": "64da3c30cfddd7f61183b24c3334f86196a9e3d7",
+    "/buzz-note-v2/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "/buzz-note-v2/styles-CO2HXFDH.css": "490e468f12bcf0bdd8668937af78e94a6b2523a7"
   },
   "navigationUrls": [
     {
