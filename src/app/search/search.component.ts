@@ -77,6 +77,9 @@ export class SearchComponent implements OnInit, OnDestroy {
     } else if (action === 4) {
       // show weather conditions
       this.searchFor = "weather";
+    } else if (action === 5) {
+      // show queen spotted filter
+      this.searchFor = "queen";
     }
   }
 
