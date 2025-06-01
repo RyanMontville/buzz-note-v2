@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1748284733425,
+  "timestamp": 1748807373344,
   "index": "/buzz-note-v2/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/buzz-note-v2/favicon.ico",
         "/buzz-note-v2/index.html",
-        "/buzz-note-v2/main-IWRHKT4U.js",
+        "/buzz-note-v2/main-JMRNZVA5.js",
         "/buzz-note-v2/manifest.webmanifest",
         "/buzz-note-v2/polyfills-FFHMD2TL.js",
-        "/buzz-note-v2/styles-CO2HXFDH.css"
+        "/buzz-note-v2/styles-ZWO3AFRH.css"
       ],
       "patterns": []
     },
@@ -35,7 +35,8 @@
         "/buzz-note-v2/icons/icon-384x384.png",
         "/buzz-note-v2/icons/icon-512x512.png",
         "/buzz-note-v2/icons/icon-72x72.png",
-        "/buzz-note-v2/icons/icon-96x96.png"
+        "/buzz-note-v2/icons/icon-96x96.png",
+        "/buzz-note-v2/loading.gif"
       ],
       "patterns": []
     }
@@ -51,11 +52,12 @@
     "/buzz-note-v2/icons/icon-512x512.png": "f099c1b7c679f6cbce731ec8a0f936cd00fa07b8",
     "/buzz-note-v2/icons/icon-72x72.png": "8ea827079b00ba0875ff9a5d6d7638d586372853",
     "/buzz-note-v2/icons/icon-96x96.png": "1adbccd7e65643515f1fc28d3fd81800fa2789a7",
-    "/buzz-note-v2/index.html": "74adae56d749fe07a24ec24231162e820845f51e",
-    "/buzz-note-v2/main-IWRHKT4U.js": "d8c79030b3190f9472583897523cf7a475eab253",
+    "/buzz-note-v2/index.html": "90a89066edad1d1999a360082c20ea990b8de28d",
+    "/buzz-note-v2/loading.gif": "f4576fd8c33e2369637c89500b189208d5c2ceb3",
+    "/buzz-note-v2/main-JMRNZVA5.js": "c07c42eafcbd25225aceba4911d68c4cfaa74a9b",
     "/buzz-note-v2/manifest.webmanifest": "1559544635ad2fff53a8a10f565bda07007ea7ce",
     "/buzz-note-v2/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/buzz-note-v2/styles-CO2HXFDH.css": "490e468f12bcf0bdd8668937af78e94a6b2523a7"
+    "/buzz-note-v2/styles-ZWO3AFRH.css": "61d2a914029c754a3bf677a32e8ae81c95f16952"
   },
   "navigationUrls": [
     {
