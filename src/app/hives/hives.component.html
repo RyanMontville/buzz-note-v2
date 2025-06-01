@@ -4,6 +4,7 @@
   <main>
     <p>Hives: {{hives?.length}}</p>
     @if (loading) {
+      <app-loading />
     <p>Loading Hives...</p>
     }
     @if (!loading) {

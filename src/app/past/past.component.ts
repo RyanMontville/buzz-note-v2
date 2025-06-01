@@ -5,10 +5,11 @@ import { InspectionService } from '../services/inspection.service';
 import { HeaderComponent } from "../header/header.component";
 import { Subscription } from 'rxjs';
 import { AlertsComponent } from "../alerts/alerts.component";
+import { LoadingComponent } from "../loading/loading.component";
 
 @Component({
   selector: 'app-past',
-  imports: [HeaderComponent, AlertsComponent],
+  imports: [HeaderComponent, AlertsComponent, LoadingComponent],
   templateUrl: './past.component.html',
   styleUrl: './past.component.css'
 })

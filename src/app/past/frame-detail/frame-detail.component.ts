@@ -2,10 +2,11 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Frame } from '../../bees.model';
 import { Subscription } from 'rxjs';
 import { FramesService } from '../../services/frames.service';
+import { LoadingComponent } from "../../loading/loading.component";
 
 @Component({
   selector: 'app-frame-detail',
-  imports: [],
+  imports: [LoadingComponent],
   templateUrl: './frame-detail.component.html',
   styleUrl: './frame-detail.component.css'
 })
