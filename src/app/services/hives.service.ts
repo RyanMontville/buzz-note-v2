@@ -7,7 +7,8 @@ import { Hive } from '../bees.model';
 })
 export class HivesService {
   private _hives = new BehaviorSubject<Hive[]>([
-    new Hive(1, 'Hive A', 3, true)
+    new Hive(1, 'Hive A', 3, true),
+    new Hive(2, 'Hive B', 3, true)
   ]);
   public hives$ = this._hives.asObservable();
 

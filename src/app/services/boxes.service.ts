@@ -7,9 +7,12 @@ import { Box } from '../bees.model';
 })
 export class BoxesService {
   private _boxes = new BehaviorSubject<Box[]>([
-    new Box(1, 1, 'Box 1', 10, 'Normal', false, true),
-    new Box(2, 1, 'Box 2', 10, 'Normal', false, true),
-    new Box(3, 1, 'Box 3', 10, 'Normal', false, true),
+    new Box(1, 1, 'Box 1', 5, 'Normal', false, true),
+    new Box(2, 1, 'Box 2', 5, 'Normal', false, true),
+    new Box(3, 1, 'Box 3', 5, 'Normal', false, true),
+    new Box(4, 2, 'Box 1', 5, 'Normal', false, true),
+    new Box(5, 2, 'Box 2', 5, 'Normal', false, true),
+    new Box(6, 2, 'Box 3', 5, 'Normal', false, true),
   ]);
   public boxes$ = this._boxes.asObservable();
 

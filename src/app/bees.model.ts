@@ -56,6 +56,21 @@ export class AverageDetail {
     }
 }
 
+export class Frame {
+    constructor(
+        public frame_id: number,
+        public box_id: number, 
+        public inspection_id: number, 
+        public box_name: string, 
+        public frame_number: string, 
+        public drawn_comb: boolean, 
+        public honey: boolean, 
+        public nectar: boolean, 
+        public brood: boolean, 
+        public queen_cells: boolean
+    ) {}
+}
+
 export class Notes {
     constructor(
         public notes: string
@@ -89,21 +104,6 @@ export class TempAndCondition {
       public condition: string
     ) {}
   }
-
-export class Frame {
-    constructor(
-        public frame_id: number,
-        public box_id: number, 
-        public inspection_id: number, 
-        public box_name: string, 
-        public frame_number: string, 
-        public drawn_comb: boolean, 
-        public honey: boolean, 
-        public nectar: boolean, 
-        public brood: boolean, 
-        public queen_cells: boolean
-    ) {}
-}
 
 export class FrameFormGroup {
     constructor(
