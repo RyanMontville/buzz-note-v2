@@ -1,6 +1,9 @@
 # BuzzNote V2
-Version 2.0 of BuzzNote - A bee hive health tracker
-[WIP link](https://ryanmontville.com/buzz-note-v2/)
+Version 2.0 of BuzzNote - A bee hive health tracker. A web app for Monte's Own that can be used to track the health of bee hives. The app allows the user to quickly and easily record the data using their phone when the go to inspect the bee hives. The purpose of recording the inspections is to try to find patterns and possibly use the data from last year to predict what will happen this year.
+
+[View Live Demo](https://ryanmontville.com/buzz-note-v2/)
+
+January 2026 Update: [Version 3.0 is now live](https://github.com/RyanMontville/buzz-note-v3).
 
 ## Changes
 | V1 | V2 |
